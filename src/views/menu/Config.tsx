@@ -68,7 +68,7 @@ export const items = () => {
             title: 'Gestión de Personal',
             subitems: [
                 {
-                    title: 'Usuarios',
+                    title: 'Usuario',
                     path: '/usersView',
                     icon: (
                         <SvgIcon fontSize="small">
