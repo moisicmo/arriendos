@@ -22,7 +22,7 @@ export const AppRouter = () => {
     };
 
     return (
-        (status != 'not-authenticated') ?
+        (status === 'not-authenticated') ?
             <AuthPage />
             :
             <Layout>
