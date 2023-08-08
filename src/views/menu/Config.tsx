@@ -5,7 +5,7 @@ export const items = () => {
 
     return [
         {
-            title: 'Tablero',
+            title: 'Tablero general',
             subitems: [
                 {
                     title: 'Descipción General',
