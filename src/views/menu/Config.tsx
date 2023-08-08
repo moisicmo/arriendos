@@ -65,7 +65,7 @@ export const items = () => {
             ].filter(Boolean),
         },
         {
-            title: 'Gestión de Personal',
+            title: 'Gestión de Persona',
             subitems: [
                 {
                     title: 'Usuarios',
