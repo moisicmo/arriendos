@@ -9,18 +9,18 @@ import { useAuthStore, useForm } from '../../hooks';
 import { ComponentInput } from '../../components';
 
 const loginFormFields = {
-    loginEmail: '',
+    loginUser: '',
     loginPassword: '',
 }
 
 export const AuthPage = () => {
     const { startLogin, errorMessage } = useAuthStore();
 
-    const { loginEmail, loginPassword, onInputChange } = useForm(loginFormFields);
+    const { loginUser, loginPassword, onInputChange } = useForm(loginFormFields);
 
     const loginSubmit = (event: any) => {
         event.preventDefault();
-        startLogin({ email: loginEmail, password: loginPassword });
+        startLogin({ username: loginUser, password: loginPassword });
     }
 
 
@@ -47,10 +47,10 @@ export const AuthPage = () => {
                     <h3>AUTH </h3>
                     <form onSubmit={loginSubmit}>
                         <ComponentInput
-                            type="email"
+                            type="text"
                             label="Cuenta"
-                            name="loginEmail"
-                            value={loginEmail}
+                            name="loginUser"
+                            value={loginUser}
                             onChange={onInputChange}
                         />
                         <ComponentInput

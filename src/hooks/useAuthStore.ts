@@ -7,15 +7,15 @@ export const useAuthStore = () => {
     const { status, user, errorMessage, statusStudent } = useSelector((state: any) => state.auth);
     const dispatch = useDispatch();
 
-    const startLogin = async ({ email, password }: { email: string, password: string }) => {
-        dispatch(onChecking());
+    const startLogin = async ({ username, password }: { username: string, password: string }) => {
+        // dispatch(onChecking());
         try {
-            const { data } = await cafeApi.post('/auth', { email, password });
+            const { data } = await cafeApi.post('/autenticar', { username, password });
             console.log(data)
-            localStorage.setItem('token', data.token);
-            localStorage.setItem('token-init-date', new Date().getTime().toString());
-            localStorage.setItem('data', JSON.stringify(data.user))
-            dispatch(onLogin(data.user));
+            // localStorage.setItem('token', data.token);
+            // localStorage.setItem('token-init-date', new Date().getTime().toString());
+            // localStorage.setItem('data', JSON.stringify(data.user))
+            // dispatch(onLogin(data.user));
         } catch (error: any) {
             dispatch(onLogout());
             Swal.fire('Oops ocurrio algo', error.response.data.errors[0].msg, 'error');
