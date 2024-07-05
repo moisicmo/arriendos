@@ -5,7 +5,7 @@ export const items = () => {
 
     return [
         {
-            title: 'Principal|',
+            title: 'Tablero general',
             subitems: [
                 {
                     title: 'Descipción General',
@@ -65,7 +65,7 @@ export const items = () => {
             ].filter(Boolean),
         },
         {
-            title: 'Gestión de Personal',
+            title: 'Gestión de Persona',
             subitems: [
                 {
                     title: 'Usuarios',
